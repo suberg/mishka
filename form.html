@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Вязание на заказ</title>
+  </head>
+  <body>
+
+    <header class="page-header">
+      <a class="page-header__logo" href="index.html">
+        <img src="http://placehold.it/86x35" alt="Mishka logo" width="86" height="35">
+      </a>
+      <nav class="page-header__menu">
+        <ul class="page-header__list">
+          <li class="page-header__item"><a class="page-header__link" href="catalog.html">Каталог товаров</a></li>
+          <li class="page-header__item"><a class="page-header__link">Вязание на заказ</a></li>
+          <li class="page-header__item"><a class="page-header__link" href="#">Поиск по сайту</a></li>
+          <li class="page-header__item"><a class="page-header__link" href="#">Корзина: пока пуста</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="page-main">
+
+      <section class="mishka">
+        <h1 class="mishka__title">Вязание на заказ</h1>
+      </section>
+
+      <section class="content">
+        <p class="content__desc">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+
+        <form class="form" action="https://echo.htmlacademy.ru/" method="post">
+
+          <fieldset class="form__fieldset">
+            <legend class="form__title">Тип</legend>
+            <label class="radio">
+              <input class="radio__choose" name="type" type="radio" value="Аксессуар для интерьера" checked>
+              <span class="radio__circle"></span>
+              <span class="radio__text">Аксессуар для интерьера</span>
+            </label>
+            <label class="radio">
+              <input class="radio__choose" name="type" type="radio" value="Детская игрушка">
+              <span class="radio__circle"></span>
+              <span class="radio__text">Детская игрушка</span>
+            </label>
+          </fieldset>
+
+          <fieldset class="form__fieldset">
+            <legend class="form__title">Цвет</legend>
+            <label class="checkbox">
+              <input class="checkbox__input" name="color" type="checkbox" value="Белый" checked>
+              <span class="checkbox__box"></span>
+              <span class="checkbox__text">Белый</span>
+            </label>
+            <label class="checkbox">
+              <input class="checkbox__input" name="color" type="checkbox" value="Серый" checked>
+              <span class="checkbox__box"></span>
+              <span class="checkbox__text">Серый</span>
+            </label>
+            <label class="checkbox">
+              <input class="checkbox__input" name="color" type="checkbox" value="«Тиффани»">
+              <span class="checkbox__box"></span>
+              <span class="checkbox__text">«Тиффани»</span>
+            </label>
+            <label class="checkbox">
+              <input class="checkbox__input" name="color" type="checkbox" value="Черный">
+              <span class="checkbox__box"></span>
+              <span class="checkbox__text">Черный</span>
+            </label>
+            <label class="checkbox">
+              <input class="checkbox__input" name="color" type="checkbox" value="Розовый">
+              <span class="checkbox__box"></span>
+              <span class="checkbox__text">Розовый</span>
+            </label>
+            <label class="checkbox">
+              <input class="checkbox__input" name="color" type="checkbox" value="Оранжевый">
+              <span class="checkbox__box"></span>
+              <span class="checkbox__text">Оранжевый</span>
+            </label>
+          </fieldset>
+
+          <fieldset class="form__fieldset">
+            <legend class="form__title">ФИО</legend>
+            <label class="area">
+              <span class="area__text">Имя:</span>
+              <input class="field" type="text" name="name" placeholder="Введите ваше имя*" required>
+            </label>
+            <label class="area">
+              <span class="area__text">Фамилия:</span>
+              <input class="field" type="text" name="name" placeholder="Укажите фамилию*" required>
+            </label>
+            <label class="area">
+              <span class="area__text">Отчество:</span>
+              <input class="field" type="text" name="name" placeholder="Отчество, если желаете">
+            </label>
+          </fieldset>
+
+          <fieldset class="form__fieldset">
+            <legend class="form__title">Тел</legend>
+            <input class="field" type="tel" name="tel" placeholder="+7 ХХХ ХХ ХХ*" required>
+          </fieldset>
+
+          <fieldset class="form__fieldset">
+            <legend class="form__title">E-mail</legend>
+            <input class="field" type="email" name="email" placeholder="Ваш Email*" required>
+          </fieldset>
+
+          <fieldset class="form__fieldset">
+            <legend class="form__title">Доп</legend>
+            <textarea class="textarea" placeholder="Опишите все ваши пожелания к заказу">
+            </textarea>
+          </fieldset>
+
+          <p class="form__required">*Поля обязательны для заполнения</p>
+          <button class="btn" type="submit">Отправить заказ</button>
+
+        </form>
+
+      </section>
+
+    </main>
+
+    <footer class="page-footer">
+      <section class="social">
+        <a class="social__link" href="#">
+          <img src="http://placehold.it/22x21" alt="instagram" class="social__image" width="22" height="21">
+        </a>
+        <a class="social__link" href="#">
+          <img src="http://placehold.it/15x29" alt="facebook" class="social__image" width="15" height="29">
+        </a>
+        <a class="social__link" href="#">
+          <img src="http://placehold.it/24x20" alt="twitter" class="social__image" width="24" height="20">
+        </a>
+      </section>
+      <a class="developer">
+        <span class="developer__title">Разработано</span>
+        <img class="developer__logo" src="http://placehold.it/27x34" alt="HTML Academy" width="27" height="34">
+      </a>
+    </footer>
+
+  </body>
+</html>
