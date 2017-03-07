@@ -1,0 +1,11 @@
+Папка для файлов PreCSS (набора плагинов для PostCSS).
+
+https://github.com/jonathantneal/precss
+
+--
+
+Структура файлов:
+
+postcss/
+| - style.css
+| - [другие *.css файлы]
