@@ -1,0 +1,45 @@
+.radio {
+  display: block;
+  font-size: 17px;
+  line-height: 18px;
+  cursor: pointer;
+  @mixin title;
+  overflow: hidden;
+}
+
+.radio:hover .radio__text::before,
+.radio:focus .radio__text::before {
+  border-color: $color-main;
+}
+
+.radio:active .radio__text::before {
+  border-color: $light-gray;
+}
+
+.radio__choose {
+  display: none;
+}
+
+.radio__text {
+  display: block;
+  padding: 8px 0 15px 0;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    width: 39px;
+    float: left;
+    height: 39px;
+    box-sizing: border-box;
+    padding: 10px;
+    background-clip: content-box;
+    border: 2px solid #444444;
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin: -7px 23px 0 0;
+  }
+}
+
+.radio__choose:checked + .radio__text::before {
+  background-color: $color-main;
+}

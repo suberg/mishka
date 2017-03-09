@@ -1,0 +1,26 @@
+.field {
+  font-family: $font;
+  border: none;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 2px solid #000000;
+  padding: 15px 0;
+  background-repeat: no-repeat;
+  background-position: top 10px right 6px;
+
+  &:hover, &:focus {
+    border-color: $color-main;
+  }
+
+  &--tel {
+    background-image: url("../img/icon-phone.svg");
+  }
+
+  &--email {
+    background-image: url("../img/icon-mail.svg");
+  }
+
+  &--email, &--tel {
+    padding-right: 40px;
+  }
+}

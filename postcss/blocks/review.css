@@ -1,0 +1,24 @@
+.review {
+  margin: 24px 0 29px;
+}
+
+.review__text {
+  font-size: 15px;
+  line-height: 30px;
+  @mixin text;
+  margin-bottom: 26px;
+}
+
+.review__author {
+  font-size: 18px;
+  line-height: 24px;
+  @mixin title;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.review__contact {
+  font-size: 17px;
+  line-height: 30px;
+  @mixin text;
+}

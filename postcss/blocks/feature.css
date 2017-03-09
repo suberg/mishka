@@ -1,0 +1,37 @@
+.feature {
+  font-size: 17px;
+  line-height: 20px;
+  @mixin title;
+  padding: 50px 10px 0 0;
+  margin: 34px 0;
+  background-repeat: no-repeat;
+  background-position: left top;
+
+  &--ecological {
+    background-image: url("../img/icon-feature-1.svg");
+    background-position: 8px top;
+  }
+
+  &--scandinavian {
+    background-image: url("../img/icon-feature-3.svg");
+  }
+
+  &--likes {
+    background-image: url("../img/icon-feature-5.svg");
+    background-position: 7px 4px;
+  }
+
+  &--knit {
+    background-image: url("../img/icon-feature-2.svg");
+    background-position: 4px top;
+  }
+
+  &--domestic {
+    background-image: url("../img/icon-feature-4.svg");
+  }
+
+  &--gift {
+    background-image: url("../img/icon-feature-6.svg");
+    background-position: 3px top;
+  }
+}

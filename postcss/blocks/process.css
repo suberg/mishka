@@ -1,0 +1,50 @@
+.process {
+  border: 1px solid $color-border;
+  margin: 30px auto 67px;
+  width: 260px;
+}
+
+.process__header {
+  padding: 24px 20px 23px 90px;
+  background: url("../img/icon-video.svg") no-repeat 33px 29px;
+}
+
+.process__title {
+  margin: 0;
+}
+
+.process__video {
+  position: relative;
+
+  &::before {
+    content: "";
+    background: url("../img/icon-play.svg") no-repeat;
+    position: absolute;
+    width: 102px;
+    height: 78px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+  }
+
+  &:hover::before, &:focus::before {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+
+  &:active::before {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.3;
+  }
+}
+
+.process__desc {
+  padding: 24px 34px;
+}
+
+.process__text {
+  font-size: 13px;
+  line-height: 24px;
+  @mixin text;
+  margin: 0 0 25px;
+}

@@ -1,0 +1,12 @@
+.textarea {
+  font-family: $font;
+  border: 2px solid #000000;
+  width: 100%;
+  min-height: 142px;
+  box-sizing: border-box;
+  padding: 15px;
+
+  &:hover, &:focus {
+    border-color: $color-main;
+  }
+}

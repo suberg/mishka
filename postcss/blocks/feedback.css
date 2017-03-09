@@ -1,0 +1,25 @@
+.feedback {
+  margin: 52px 0 69px;
+}
+
+.feedback__arrows {
+  font-size: 0;
+  margin: 29px 0 38px;
+}
+
+.feedback__arrow {
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+  border: 1px solid $color-border;
+  background-color: #ffffff;
+  padding: 12px;
+
+  &:hover, &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

@@ -1,0 +1,26 @@
+.form__fieldset {
+  border: none;
+  border-top: 1px solid $color-main;
+  padding: 22px 0 12px;
+  margin: 0;
+
+  &--padding {
+    padding: 4px 0 27px;
+  }
+}
+
+.form__title {
+  font-size: 17px;
+  line-height: 24px;
+  @mixin title;
+  color: $color-main;
+  text-transform: uppercase;
+  padding-right: 25px;
+}
+
+.form__required {
+  font-size: 14px;
+  line-height: 16px;
+  @mixin text;
+  margin: 0 0 33px;
+}

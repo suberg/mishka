@@ -1,0 +1,15 @@
+@define-mixin title $color: #000000, $font-weight: bold {
+  color: $color;
+  font-weight: $font-weight;
+}
+
+@define-mixin button $color: $gray, $font-weight: bold {
+  color: $color;
+  font-weight: $font-weight;
+  text-transform: uppercase;
+}
+
+@define-mixin text $color: $gray, $font-weight: normal {
+  color: $gray;
+  font-weight: $font-weight;
+}

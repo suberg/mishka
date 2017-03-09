@@ -1,0 +1,57 @@
+.product {
+  border: 1px solid $color-border;
+  margin: 30px auto;
+  width: 260px;
+
+  &:hover, &:focus {
+    box-shadow: 0 4px 5px 2px $color-border;
+  }
+
+  &:active {
+    box-shadow: 0 2px 5px 1px $color-border;
+  }
+}
+
+.product__desc {
+  padding: 23px 0 20px;
+  margin: 0 27px;
+  border-bottom: 1px solid $color-border;
+}
+
+.product__caption {
+  margin: 0;
+
+  &:hover, &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.product__parameter {
+  font-size: 13px;
+  line-height: 30px;
+  @mixin text;
+  margin: 5px 0 0;
+}
+
+.product__buy {
+  padding: 20px 0 27px;
+  margin: 0 27px;
+}
+
+.product__price {
+  font-size: 15px;
+  line-height: 24px;
+  @mixin title;
+}
+
+.product__add {
+  float: right;
+  border: none;
+  background-color: #ffffff;
+  padding: 0;
+  cursor: pointer;
+}
