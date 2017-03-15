@@ -1,0 +1,43 @@
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 10;
+
+  &--show {
+    display: block;
+  }
+}
+
+.modal__container {
+  width: 320px;
+  box-sizing: border-box;
+  padding: 35px 0 45px;
+  border: 1px solid $light-gray;
+  background-color: #ffffff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 5px 5px 0px $light-gray;
+}
+
+.modal__text {
+  font-size: 15px;
+  line-height: 30px;
+  @mixin text;
+}
+
+.modal__form {
+  margin: 0 29px;
+  text-align: center;
+}
+
+.modal__title {
+  text-transform: uppercase;
+  margin: 0 50px;
+}

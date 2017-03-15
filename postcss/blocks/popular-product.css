@@ -1,0 +1,54 @@
+.popular-product {
+  margin: 27px 0 69px;
+}
+
+.popular-product__label {
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: bold;
+  color: $color-main;
+  text-transform: uppercase;
+}
+
+.popular-product__desc {
+  font-size: 15px;
+  line-height: 24px;
+  @mixin text;
+  margin: 22px 0 18px;
+}
+
+.popular-product__table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 18px 0 28px;
+}
+
+.popular-product__row {
+  border-bottom: 1px solid $color-border;
+}
+
+.popular-product__row td {
+  font-size: 15px;
+  line-height: 20px;
+  @mixin text;
+  padding: 9px 29px 10px 0;
+}
+
+.popular-product__parameter {
+  padding-right: 11px;
+}
+
+.popular-product__pic {
+  display: block;
+  margin: 0 auto;
+}
+
+.popular-product__price {
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: bold;
+  color: $gray;
+  display: block;
+  text-align: center;
+  margin: 24px 0 26px;
+}

@@ -1,0 +1,6 @@
+.title {
+  font-size: 25px;
+  line-height: 30px;
+  @mixin title;
+  margin: 27px 0 6px;
+}

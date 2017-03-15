@@ -1,0 +1,12 @@
+.data-input {
+  display: block;
+  margin-bottom: 23px;
+  font-size: 17px;
+  line-height: 18px;
+  @mixin title;
+  overflow: hidden;
+
+  &:last-child {
+    margin-bottom: 18px;
+  }
+}

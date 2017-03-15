@@ -1,0 +1,15 @@
+.social {
+  border-bottom: 1px solid $color-border;
+  text-align: center;
+  padding: 24px;
+}
+
+.social__link {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 37px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

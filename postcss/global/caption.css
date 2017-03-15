@@ -1,0 +1,6 @@
+.caption {
+  font-size: 17px;
+  line-height: 24px;
+  @mixin title;
+  text-decoration: none;
+}

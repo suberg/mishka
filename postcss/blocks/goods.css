@@ -1,0 +1,44 @@
+.goods {
+  margin-top: auto;
+  overflow: hidden;
+}
+
+.goods__item {
+  font-size: 19px;
+  line-height: 24px;
+  @mixin title;
+  color: #ffffff;
+  display: block;
+  text-decoration: none;
+  padding: 26px 150px 26px 28px;
+  min-height: 51px;
+  background-repeat: no-repeat;
+
+  &--interior {
+    background-color: $color-main;
+    background-image: url("../img/icon-interior.svg");
+    background-position: top 23px right 37px;
+    transform: translateY(10px);
+
+    &:hover, &:focus {
+      transform: translateY(5px);
+    }
+
+  }
+
+  &--toys {
+    background-color: $tiffany;
+    background-image: url("../img/icon-toy.svg");
+    background-position: top 21px right 27px;
+    transform: translateY(5px);
+
+    &:hover, &:focus {
+      transform: translateY(0);
+    }
+
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}

@@ -1,0 +1,22 @@
+.developer {
+  display: table;
+  margin: 20px auto;
+  cursor: pointer;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.developer__title {
+  font-size: 19px;
+  line-height: 24px;
+  @mixin title;
+  padding-right: 30px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.developer__logo {
+  fill: $color-main;
+}

@@ -1,0 +1,10 @@
+.content {
+  margin: 20px 0 55px;
+}
+
+.content__desc {
+  font-size: 13px;
+  line-height: 24px;
+  @mixin text;
+  margin-bottom: 21px;
+}
