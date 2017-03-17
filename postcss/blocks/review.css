@@ -1,24 +1,50 @@
 .review {
-  margin: 24px 0 29px;
+  margin: 0;
 }
 
 .review__text {
   font-size: 15px;
   line-height: 30px;
-  @mixin text;
+
   margin-bottom: 26px;
+  @mixin text;
 }
 
 .review__author {
   font-size: 18px;
   line-height: 24px;
-  @mixin title;
+
   display: block;
+
   margin-bottom: 4px;
+  @mixin title;
 }
 
 .review__contact {
   font-size: 17px;
   line-height: 30px;
   @mixin text;
+}
+
+@media (--tablet) {
+  .review {
+    margin: 45px 0 0;
+  }
+
+  .review__text {
+    font-size: 17px;
+
+    margin-bottom: 57px;
+  }
+
+  .review__author {
+    font-size: 17px;
+  }
+}
+
+@media (--desktop) {
+  .review__text {
+    margin-right: 80px;
+    margin-bottom: 38px;
+  }
 }

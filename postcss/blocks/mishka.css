@@ -1,20 +1,73 @@
 .mishka {
-  background-color: $color-border;
-  min-height: 177px;
   display: flex;
   flex-direction: column;
+  min-height: 177px;
 
+  background-color: $color-border;
   &--image {
-    min-height: 479px;
-    padding-top: 9px;
-    background: $color-background url("../img/hero-mobile@1x.jpg") no-repeat center -19px;
+    min-height: 466px;
+    padding-top: 22px;
+
+    background: #f9f9f9 url('../img/hero-mobile@1x.jpg') no-repeat center -19px;
   }
+}
+
+.mishka__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+
+  min-height: inherit;
+  justify-content: center;
 }
 
 .mishka__title {
   font-size: 27px;
   line-height: 30px;
-  @mixin title;
+  align-self: center;
+
+  padding-bottom: 5px;
+
   text-align: center;
-  margin: auto 20px;
+  @mixin title;
+}
+
+@media (--tablet) {
+  .mishka {
+    min-height: 223px;
+    &.mishka--image {
+      min-height: 734px;
+      padding-top: 11px;
+    }
+  }
+
+  .mishka__title {
+    font-size: 43px;
+    line-height: 50px;
+    padding-top: 15px;
+  }
+}
+
+@media (--desktop) {
+  .mishka {
+    min-height: 249px;
+    &.mishka--image {
+      min-height: 710px;
+      padding-top: 35px;
+    }
+  }
+
+  .mishka__title {
+    font-size: 53px;
+    line-height: 57px;
+
+    margin: 0 200px;
+    padding: 0 0 10px;
+  }
+}
+
+@media (min-width: 1167px) {
+  .mishka__wrapper {
+    width: 100%;
+  }
 }

@@ -1,3 +1,21 @@
 .container {
-  padding: 0 9.375%;
+  padding-right: $container-padding-mobile;
+  padding-left: $container-padding-mobile;
+}
+
+@media (--tablet) {
+  .container {
+    padding-right: $container-padding-tablet;
+    padding-left: $container-padding-tablet;
+  }
+}
+
+@media (--desktop) {
+  .container {
+    max-width: 1050px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: $container-padding-desktop;
+    padding-left: $container-padding-desktop;
+  }
 }

@@ -5,6 +5,33 @@
 .content__desc {
   font-size: 13px;
   line-height: 24px;
+
+  margin-bottom: 12px;
   @mixin text;
-  margin-bottom: 21px;
+}
+
+@media (--tablet) {
+  .content {
+    margin: 73px 0 52px;
+  }
+
+  .content__desc {
+    font-size: 17px;
+    line-height: 30px;
+
+    margin-bottom: 10px;
+  }
+}
+
+@media (--desktop) {
+  .content {
+    margin: 125px 0 52px;
+  }
+  .content__desc {
+    font-size: 17px;
+    line-height: 30px;
+
+    width: calc($column-width-dekstop*4);
+    margin-left: $column-width-dekstop;
+  }
 }

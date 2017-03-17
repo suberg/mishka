@@ -1,0 +1,20 @@
+.products {
+  display: flex;
+
+  margin: 15px 0;
+
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media (--tablet) {
+  .products {
+    margin: 54px auto 26px;
+  }
+}
+
+@media (--desktop) {
+  .products {
+    margin: 105px auto 26px;
+  }
+}

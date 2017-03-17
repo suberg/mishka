@@ -1,9 +1,18 @@
-$font: "Open Sans", Arial, sans-serif;
+$font: 'Open Sans', Arial, sans-serif;
 
 $color-main: #63d1bb;
-$color-background: #f9f9f9;
-$color-footer: #f1f1f1;
+$color-background: #f1f1f1;
 $color-border: #ececec;
 $gray: #444444;
 $light-gray: #c7c7c7;
 $tiffany: #56c3b2;
+
+@custom-media --tablet (min-width: 768px);
+@custom-media --desktop (min-width: 1150px);
+
+$container-padding-mobile: 9.375%;
+$container-padding-tablet: 6.5%;
+$container-padding-desktop: 4.3%;
+$column-width-tablet: 25%;
+$column-width-dekstop: 175px;
+$mobile-no-container: -11.5%;

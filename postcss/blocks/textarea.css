@@ -1,12 +1,14 @@
 .textarea {
   font-family: $font;
-  border: 2px solid #000000;
+
+  box-sizing: border-box;
   width: 100%;
   min-height: 142px;
-  box-sizing: border-box;
   padding: 15px;
 
-  &:hover, &:focus {
+  border: 2px solid #000000;
+  &:hover,
+  &:focus {
     border-color: $color-main;
   }
 }

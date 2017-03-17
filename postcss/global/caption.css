@@ -1,6 +1,13 @@
 .caption {
   font-size: 17px;
   line-height: 24px;
-  @mixin title;
+
   text-decoration: none;
+  @mixin title;
+}
+
+@media (--tablet) {
+  .caption {
+    font-size: 20px;
+  }
 }

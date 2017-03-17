@@ -1,26 +1,142 @@
-.form__fieldset {
-  border: none;
-  border-top: 1px solid $color-main;
-  padding: 22px 0 12px;
-  margin: 0;
+.form {
+  display: flex;
+  flex-direction: column;
+}
 
-  &--padding {
-    padding: 4px 0 27px;
-  }
+.form__fieldset {
+  padding-top: 8px;
+  padding-bottom: 10px;
+}
+
+.form__fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  border: none;
+}
+
+.form__row {
+  display: flex;
+  flex-direction: column;
 }
 
 .form__title {
   font-size: 17px;
+  font-weight: bold;
   line-height: 24px;
-  @mixin title;
-  color: $color-main;
+
+  position: relative;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+  margin: 0 0 22px;
+
   text-transform: uppercase;
-  padding-right: 25px;
+
+  color: $color-main;
+
+  flex-shrink: 0;
+  &.form__title--margin {
+    margin-bottom: 2px;
+  }
+  &::after {
+    position: absolute;
+    top: 50%;
+
+    width: 100%;
+    height: 1px;
+    margin-left: 25px;
+
+    content: '';
+
+    background-color: $color-main;
+  }
+}
+
+.form__footer {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 6px;
 }
 
 .form__required {
   font-size: 14px;
   line-height: 16px;
+
+  margin: 0 0 30px;
   @mixin text;
-  margin: 0 0 33px;
+}
+
+@media (--tablet) {
+  .form__fieldset {
+    padding-top: 47px;
+    padding-bottom: 29px;
+    &.form__fieldset--background {
+      background-color: $color-background;
+    }
+  }
+
+  .form__fieldset-wrapper {
+    flex-direction: row;
+
+    flex-wrap: wrap;
+  }
+
+  .form__row {
+    flex-direction: row;
+
+    width: calc($column-width-tablet*3);
+
+    flex-wrap: wrap;
+  }
+
+  .form__title {
+    width: $column-width-tablet;
+    margin-top: 15px;
+    &::after {
+      content: none;
+    }
+  }
+
+  .form__required {
+    font-size: 17px;
+    line-height: 30px;
+
+    margin: 0;
+  }
+
+  .form__button {
+    width: 230px;
+    margin: 0;
+  }
+
+  .form__footer {
+    flex-direction: row-reverse;
+
+    margin-top: 25px;
+
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (--desktop) {
+  .form__title {
+    width: $column-width-dekstop;
+    padding-left: 60px;
+  }
+
+  .form__row {
+    width: calc($column-width-dekstop*4);
+    &.form__row--wide {
+      width: calc($column-width-dekstop*5);
+    }
+  }
+
+  .form__footer {
+    width: calc($column-width-dekstop*4);
+    margin-top: 18px;
+  }
 }

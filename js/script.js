@@ -4,7 +4,6 @@ var hamburger = document.querySelector(".page-header__button");
 var menu = document.querySelector(".page-header__menu");
 var modal = document.querySelector(".modal");
 var order = document.querySelectorAll("button.btn, .product__add");
-console.log(order);
 
 hamburger.addEventListener("click", function() {
   menu.classList.toggle("page-header__menu--visible");
