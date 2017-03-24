@@ -1,26 +1,53 @@
 .field {
   font-family: $font;
-  border: none;
-  width: 100%;
+
   box-sizing: border-box;
-  border-bottom: 2px solid #000000;
+  width: 100%;
   padding: 15px 0;
+
+  border: none;
+  border-bottom: 2px solid #000000;
+  background-color: transparent;
   background-repeat: no-repeat;
   background-position: top 10px right 6px;
-
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     border-color: $color-main;
   }
+  &.field--tel {
+    margin-bottom: 30px;
 
-  &--tel {
-    background-image: url("../img/icon-phone.svg");
+    background-image: url('../img/icon-phone.svg');
   }
+  &.field--email {
+    margin-bottom: 11px;
 
-  &--email {
-    background-image: url("../img/icon-mail.svg");
+    background-image: url('../img/icon-mail.svg');
   }
-
-  &--email, &--tel {
+  &.field--email,
+  &.field--tel {
     padding-right: 40px;
+  }
+}
+
+@media (--tablet) {
+  .field {
+    font-size: 19px;
+
+    padding-left: 17px;
+
+    background-position: top 11px right 23px;
+    &.field--tel {
+      margin-bottom: 24px;
+    }
+    &.field--email {
+      margin-bottom: 23px;
+    }
+  }
+}
+
+@media (--desktop) {
+  .field {
+    background-position: top 11px right 6px;
   }
 }

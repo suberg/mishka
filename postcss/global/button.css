@@ -1,46 +1,43 @@
 .btn {
-  @mixin button;
+  font-family: $font;
   font-size: 17px;
   line-height: 20px;
-  width: 260px;
-  margin: 0 auto;
+
   display: block;
+
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto;
+  padding: 14px;
+
+  cursor: pointer;
+  text-align: center;
   text-decoration: none;
+  transition: all 0.2s;
+
   border: 2px solid $gray;
   background-color: #ffffff;
-  box-sizing: border-box;
-  cursor: pointer;
-  padding: 14px;
-  text-align: center;
-  font-family: $font;
-
-  &:hover, &:focus {
-    background-color: $gray;
+  @mixin button;
+  &:hover,
+  &:focus {
     color: #ffffff;
+    background-color: $gray;
   }
-
   &:active {
     color: rgba(255, 255, 255, 0.3);
   }
-
-  &--green,
-  &--green {
-    background-color: $color-main;
-    border-color: $color-main;
+  &.btn--green,
+  &.btn--green {
     color: #ffffff;
+    border-color: $color-main;
+    background-color: $color-main;
   }
-
-  &--green:hover,
-  &--green:focus {
-    background-color: #ffffff;
+  &.btn--green:hover,
+  &.btn--green:focus {
     color: $color-main;
+    background-color: #ffffff;
   }
-
-  &--green:active {
+  &.btn--green:active {
     opacity: 0.6;
-  }
-
-  &--process {
-    width: 192px;
   }
 }

@@ -1,35 +1,48 @@
 .pick {
-  border: none;
+  margin: 25px 0 30px;
   padding: 0;
-  margin: 25px 0;
+
+  border: none;
 }
 
 .pick__label {
+  float: left;
+
+  box-sizing: border-box;
   width: 82px;
   height: 52px;
-  float: left;
-  box-sizing: border-box;
   margin-right: 7px;
-  cursor: pointer;
 
+  cursor: pointer;
   &:last-child {
     margin-right: 0;
   }
 }
 
 .pick__letter {
-  @mixin button;
   font-size: 17px;
   line-height: 20px;
-  padding: 15px;
+
   display: block;
+
+  padding: 15px;
+
   border: 2px solid $color-border;
+  @mixin button;
 }
 
 .pick__radio {
   display: none;
-
   &:checked + .pick__letter {
     border-color: $color-main;
+  }
+}
+
+@media (--tablet) {
+  .pick {
+    margin: 20px 0 30px;
+  }
+  .pick__label {
+    width: 113px;
   }
 }

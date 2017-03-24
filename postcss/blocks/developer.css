@@ -1,8 +1,11 @@
 .developer {
-  display: table;
-  margin: 20px auto;
+  display: flex;
+
+  margin: 24px 0 22px;
+
   cursor: pointer;
 
+  justify-content: center;
   &:active {
     opacity: 0.3;
   }
@@ -11,12 +14,20 @@
 .developer__title {
   font-size: 19px;
   line-height: 24px;
+
+  padding-right: 28px;
   @mixin title;
-  padding-right: 30px;
-  display: table-cell;
-  vertical-align: middle;
 }
 
 .developer__logo {
   fill: $color-main;
+}
+
+@media (--tablet) {
+  .developer {
+    min-width: 200px;
+    margin: 0;
+
+    justify-content: flex-end;
+  }
 }

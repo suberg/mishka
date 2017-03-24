@@ -1,37 +1,70 @@
 .feature {
   font-size: 17px;
   line-height: 20px;
-  @mixin title;
-  padding: 50px 10px 0 0;
-  margin: 34px 0;
-  background-repeat: no-repeat;
-  background-position: left top;
 
-  &--ecological {
-    background-image: url("../img/icon-feature-1.svg");
+  box-sizing: border-box;
+  margin: 16px 0;
+  padding: 52px 10px 0 0;
+
+  background-repeat: no-repeat;
+  @mixin title;
+  &.feature--ecological {
+    background-image: url('../img/icon-feature-1.svg');
     background-position: 8px top;
   }
-
-  &--scandinavian {
-    background-image: url("../img/icon-feature-3.svg");
+  &.feature--scandinavian {
+    background-image: url('../img/icon-feature-3.svg');
+    background-position: left top;
   }
-
-  &--likes {
-    background-image: url("../img/icon-feature-5.svg");
+  &.feature--likes {
+    background-image: url('../img/icon-feature-5.svg');
     background-position: 7px 4px;
   }
-
-  &--knit {
-    background-image: url("../img/icon-feature-2.svg");
+  &.feature--knit {
+    background-image: url('../img/icon-feature-2.svg');
     background-position: 4px top;
   }
-
-  &--domestic {
-    background-image: url("../img/icon-feature-4.svg");
+  &.feature--domestic {
+    background-image: url('../img/icon-feature-4.svg');
+    background-position: left top;
   }
-
-  &--gift {
-    background-image: url("../img/icon-feature-6.svg");
+  &.feature--gift {
+    background-image: url('../img/icon-feature-6.svg');
     background-position: 3px top;
+  }
+}
+
+@media (--tablet) {
+  .feature {
+    font-size: 20px;
+    line-height: 22px;
+
+    width: 50%;
+    margin: 30px 0;
+    padding-right: 40px;
+    &.feature--ecological {
+      order: 1;
+    }
+    &.feature--scandinavian {
+      order: 3;
+    }
+    &.feature--likes {
+      order: 5;
+    }
+    &.feature--knit {
+      order: 2;
+    }
+    &.feature--domestic {
+      order: 4;
+    }
+    &.feature--gift {
+      order: 6;
+    }
+  }
+}
+
+@media (--desktop) {
+  .feature {
+    width: 40%;
   }
 }

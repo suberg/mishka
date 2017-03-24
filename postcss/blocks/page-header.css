@@ -1,38 +1,44 @@
 .page-header {
-  background-color: #ffffff;
+  position: relative;
+
   min-height: 78px;
+
   border-top: 1px solid transparent;
   border-bottom: 1px solid $color-border;
-  position: relative;
+  background-color: #ffffff;
 }
 
 .page-header__button {
   position: absolute;
-  background: url("../img/icon-menu-open.svg");
-  background-size: 21px 21px;
-  padding: 0;
-  cursor: pointer;
+  top: 28px;
+  right: 9.375%;
+
   width: 21px;
   height: 21px;
-  top: 28px;
-  right: 31px;
-  border: none;
+  padding: 0;
 
-  &--close {
-    background: url("../img/icon-menu-close.svg");
+  cursor: pointer;
+
+  border: none;
+  background: url('../img/icon-menu-open.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  &.page-header__button--close {
+    background: url('../img/icon-menu-close.svg');
   }
 }
 
 .page-header__logo {
-  margin: 21px auto 17px;
-  text-align: center;
   display: block;
-  width: 86px;
 
-  &:hover, &:focus {
+  width: 86px;
+  margin: 21px auto 17px;
+
+  text-align: center;
+  &:hover,
+  &:focus {
     opacity: 0.6;
   }
-
   &:active {
     opacity: 0.3;
   }
@@ -40,52 +46,56 @@
 
 .page-header__menu {
   position: absolute;
+  z-index: 1;
   top: 80px;
   left: 0;
-  width: 100%;
-  background-color: #ffffff;
-  display: none;
-  z-index: 1;
 
-  &--visible {
+  display: none;
+
+  width: 100%;
+
+  background-color: #ffffff;
+  &.page-header__menu--visible {
     display: block;
   }
 }
 
 .page-header__list {
-  list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
+
+  list-style: none;
 }
 
 .page-header__item {
-  border-bottom: 1px solid $color-border;
   position: relative;
+
+  border-bottom: 1px solid $color-border;
   background-repeat: no-repeat;
   background-position: 31px;
-
-  &--search {
-    background-image: url("../img/icon-search.svg");
+  &.page-header__item--search {
+    background-image: url('../img/icon-search.svg');
   }
-
-  &--basket {
-    background-image: url("../img/icon-cart.svg");
+  &.page-header__item--basket {
+    background-image: url('../img/icon-cart.svg');
   }
 }
 
 .page-header__link {
   font-size: 17px;
   line-height: 24px;
-  @mixin title;
-  text-decoration: none;
-  display: block;
-  padding: 25px 25px 29px 75px;
-  cursor: pointer;
 
-  &:hover, &:focus {
+  display: block;
+
+  padding: 25px 25px 29px 75px;
+
+  cursor: pointer;
+  text-decoration: none;
+  @mixin title;
+  &:hover,
+  &:focus {
     opacity: 0.6;
   }
-
   &:active {
     opacity: 0.3;
   }

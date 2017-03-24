@@ -1,15 +1,25 @@
 .social {
+  padding: 24px 0;
+
   border-bottom: 1px solid $color-border;
-  text-align: center;
-  padding: 24px;
 }
 
 .social__link {
   display: inline-block;
-  vertical-align: middle;
-  margin-right: 37px;
 
+  margin-right: 36px;
+
+  vertical-align: middle;
   &:last-child {
     margin-right: 0;
+  }
+}
+
+@media (--tablet) {
+  .social {
+    padding: 0;
+    flex-grow: 1;
+
+    border-bottom: none;
   }
 }

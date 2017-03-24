@@ -1,44 +1,90 @@
 .goods {
-  margin-top: auto;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  margin: 0 $mobile-no-container;
+
+  align-self: flex-end;
 }
 
 .goods__item {
   font-size: 19px;
+  font-weight: bold;
   line-height: 24px;
-  @mixin title;
-  color: #ffffff;
-  display: block;
-  text-decoration: none;
-  padding: 26px 150px 26px 28px;
-  min-height: 51px;
-  background-repeat: no-repeat;
 
-  &--interior {
-    background-color: $color-main;
-    background-image: url("../img/icon-interior.svg");
-    background-position: top 23px right 37px;
+  min-height: 51px;
+  margin: 0 $mobile-no-container;
+  padding: 26px 150px 31px 28px;
+
+  transition: transform 0.2s;
+  text-decoration: none;
+
+  color: #ffffff;
+  background-repeat: no-repeat;
+  &.goods__item--interior {
     transform: translateY(10px);
 
-    &:hover, &:focus {
+    background-color: $color-main;
+    background-image: url('../img/icon-interior.svg');
+    background-position: top 23px right 37px;
+    &:hover,
+    &:focus {
       transform: translateY(5px);
     }
-
   }
-
-  &--toys {
-    background-color: $tiffany;
-    background-image: url("../img/icon-toy.svg");
-    background-position: top 21px right 27px;
+  &.goods__item--toys {
     transform: translateY(5px);
 
-    &:hover, &:focus {
+    background-color: $tiffany;
+    background-image: url('../img/icon-toy.svg');
+    background-position: top 21px right 27px;
+    &:hover,
+    &:focus {
       transform: translateY(0);
     }
-
   }
-
   &:active {
     color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+@media (--tablet) {
+  .goods {
+    flex-direction: row;
+
+    margin: 0;
+  }
+
+  .goods__item {
+    font-size: 20px;
+    line-height: 30px;
+
+    width: 50%;
+    min-height: 62px;
+    margin: 0;
+    padding: 29px 150px 34px 35px;
+    padding-top: 30px;
+    &.goods__item--interior {
+      transform: translateY(5px);
+
+      background-position: top 30px right 37px;
+      &:hover,
+      &:focus {
+        transform: translateY(0);
+      }
+    }
+    &.goods__item--toys {
+      background-position: top 32px right 34px;
+    }
+  }
+}
+
+@media (--desktop) {
+  .goods {
+    width: 100%;
+  }
+  .goods__item {
+    padding-right: 310px;
   }
 }
