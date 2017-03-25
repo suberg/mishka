@@ -9,28 +9,37 @@
   <body class="page-body">
 
     <header class="page-header  container">
-      <div class="container">
-        <a class="page-header__logo">
-          <img src="img/logo-mobile.svg" alt="Mishka logo" width="86" height="35">
-        </a>
-        <button class="page-header__button" type="button"></button>
-        <nav class="page-header__menu">
-          <ul class="page-header__list">
-            <li class="page-header__item">
-              <a class="page-header__link" href="catalog.html">Каталог товаров</a>
-            </li>
-            <li class="page-header__item">
-              <a class="page-header__link" href="form.html">Вязание на заказ</a>
-            </li>
-            <li class="page-header__item page-header__item--search">
-              <a class="page-header__link" href="#">Поиск по сайту</a>
-            </li>
-            <li class="page-header__item page-header__item--basket">
-              <a class="page-header__link" href="#">Корзина: пока пуста</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      <a class="page-header__logo">
+        <img src="img/logo-mobile.svg" alt="Mishka logo" width="86" height="35">
+      </a>
+      <nav class="page-header__menu  page-header__menu--nojs">
+        <ul class="page-header__list">
+          <li class="page-header__item  page-header__item--basic">
+            <a class="page-header__link" href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="page-header__item  page-header__item--basic">
+            <a class="page-header__link" href="form.html">Вязание на заказ</a>
+          </li>
+          <li class="page-header__item  page-header__item--additional">
+            <a class="page-header__link" href="#">Новые поступления</a>
+          </li>
+          <li class="page-header__item  page-header__item--additional">
+            <a class="page-header__link" href="#">Распродажа</a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="page-header__menu  page-header__menu--nojs">
+        <ul class="page-header__list">
+          <li class="page-header__item page-header__item--search">
+            <a class="page-header__link" href="#">Поиск по сайту</a>
+          </li>
+          <li class="page-header__item page-header__item--basket">
+            <a class="page-header__link" href="#">Корзина: пока пуста</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="page-header__button" type="button"></button>
+      <span class="page-header__text">Бесплатная доставка по России</span>
     </header>
 
     <main class="page-main">
@@ -68,7 +77,7 @@
           </table>
           <img class="popular-product__pic" src="img/triple-set-mobile@1x.jpg" alt="Товар недели" width="260" height="315">
           <span class="popular-product__price">Цена: 990 руб.</span>
-          <button class="btn" type="button">Заказать</button>
+          <a class="btn  btn--order" href="#">Заказать</a>
         </div>
       </section>
 
