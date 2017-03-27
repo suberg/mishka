@@ -1,17 +1,19 @@
 .page-header {
   position: relative;
 
+  display: flex;
+  flex-direction: column;
+
   min-height: 78px;
 
-  border-top: 1px solid transparent;
-  border-bottom: 1px solid $color-border;
-  background-color: #ffffff;
+  justify-content: center;
+  align-items: center;
 }
 
 .page-header__button {
   position: absolute;
   top: 28px;
-  right: 9.375%;
+  right: $container-padding-mobile;
 
   width: 21px;
   height: 21px;
@@ -29,12 +31,7 @@
 }
 
 .page-header__logo {
-  display: block;
-
-  width: 86px;
-  margin: 21px auto 17px;
-
-  text-align: center;
+  padding: 20px 0;
   &:hover,
   &:focus {
     opacity: 0.6;
@@ -47,20 +44,38 @@
 .page-header__menu {
   position: absolute;
   z-index: 1;
-  top: 80px;
   left: 0;
 
   display: none;
+  flex-direction: column;
 
   width: 100%;
-
-  background-color: #ffffff;
   &.page-header__menu--visible {
-    display: block;
+    top: 80px;
+
+    display: flex;
+  }
+  &.page-header__menu--visible:last-of-type {
+    top: 238px;
+  }
+  &.page-header__menu--nojs ~ .page-header__button {
+    display: none;
+  }
+  &.page-header__menu--nojs {
+    position: static;
+
+    display: flex;
+  }
+  &.page-header__menu--nojs .page-header__list {
+    margin-right: $mobile-no-container;
+    margin-left: $mobile-no-container;
   }
 }
 
 .page-header__list {
+  display: flex;
+  flex-direction: column;
+
   margin: 0;
   padding: 0;
 
@@ -68,9 +83,11 @@
 }
 
 .page-header__item {
-  position: relative;
+  font-size: 17px;
+  line-height: 24px;
 
   border-bottom: 1px solid $color-border;
+  background-color: #ffffff;
   background-repeat: no-repeat;
   background-position: 31px;
   &.page-header__item--search {
@@ -79,12 +96,12 @@
   &.page-header__item--basket {
     background-image: url('../img/icon-cart.svg');
   }
+  &.page-header__item--additional {
+    display: none;
+  }
 }
 
 .page-header__link {
-  font-size: 17px;
-  line-height: 24px;
-
   display: block;
 
   padding: 25px 25px 29px 75px;
@@ -98,5 +115,128 @@
   }
   &:active {
     opacity: 0.3;
+  }
+}
+
+.page-header__text {
+  font-size: 15px;
+  line-height: 24px;
+
+  display: none;
+  @mixin text;
+}
+
+@media (--tablet) {
+  .page-header {
+    flex-direction: row;
+
+    min-height: 87px;
+
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .page-header__menu {
+    position: static;
+
+    display: flex;
+
+    width: auto;
+    &:first-of-type {
+      width: 100%;
+      margin-top: 20px;
+
+      order: 1;
+    }
+    &:last-of-type {
+      margin-left: auto;
+    }
+    &.page-header__menu--nojs .page-header__list {
+      margin: 0;
+    }
+  }
+
+  .page-header__list {
+    flex-direction: row;
+
+    flex-wrap: wrap;
+  }
+
+  .page-header__item {
+    border: none;
+    background-color: transparent;
+    &.page-header__item--search {
+      font-size: 0;
+    }
+    &.page-header__item--search,
+    &.page-header__item--basket {
+      border-left: 1px solid $color-border;
+    }
+    &.page-header__item--basic {
+      font-size: 15px;
+    }
+  }
+
+  .page-header__item--basic .page-header__link {
+    padding: 0 36px 0 0;
+  }
+
+  .page-header__link {
+    padding: 32px 0 31px 84px;
+  }
+
+  .page-header__button {
+    display: none;
+  }
+
+  .page-header__text {
+    display: block;
+
+    margin: -25px 0 0 auto;
+
+    order: 3;
+  }
+}
+
+@media (--desktop) {
+  .page-header__menu {
+    &:first-of-type {
+      width: auto;
+      margin-top: 0;
+      margin-right: auto;
+
+      order: -1;
+    }
+    &:first-of-type .page-header__list {
+      width: 383px;
+    }
+  }
+
+  .page-header__item {
+    &.page-header__item--basic {
+      font-size: 17px;
+      &:nth-child(2) {
+        border-left: 1px solid $color-border;
+      }
+      &:first-child .page-header__link {
+        padding: 32px 34px 31px 0;
+      }
+      &:nth-child(2) .page-header__link {
+        padding: 32px 0 31px 35px;
+      }
+    }
+    &.page-header__item--additional {
+      font-size: 15px;
+
+      display: block;
+
+      margin-top: 20px;
+      &:last-of-type .page-header__link {
+        margin-left: 60px;
+      }
+    }
+    &.page-header__item--additional .page-header__link {
+      padding: 0;
+    }
   }
 }

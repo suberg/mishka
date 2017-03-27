@@ -1,10 +1,12 @@
 .mishka {
   display: flex;
   flex-direction: column;
+
   min-height: 177px;
 
+  border-top: 1px solid $color-border;
   background-color: $color-border;
-  &--image {
+  &.mishka--image {
     min-height: 466px;
     padding-top: 22px;
 
@@ -14,46 +16,51 @@
 
 .mishka__wrapper {
   display: flex;
-  flex-wrap: wrap;
   overflow: hidden;
 
   min-height: inherit;
+
+  flex-wrap: wrap;
   justify-content: center;
 }
 
 .mishka__title {
   font-size: 27px;
   line-height: 30px;
-  align-self: center;
 
   padding-bottom: 5px;
 
   text-align: center;
+
+  align-self: center;
   @mixin title;
 }
 
 @media (--tablet) {
   .mishka {
-    min-height: 223px;
+    margin-top: -44px;
+    min-height: 225px;
     &.mishka--image {
-      min-height: 734px;
-      padding-top: 11px;
+      min-height: 747px;
+      padding-top: 0;
     }
   }
 
   .mishka__title {
     font-size: 43px;
     line-height: 50px;
+
     padding-top: 15px;
+    padding-bottom: 0;
   }
 }
 
 @media (--desktop) {
   .mishka {
-    min-height: 249px;
+    min-height: 252px;
     &.mishka--image {
       min-height: 710px;
-      padding-top: 35px;
+      padding-top: 38px;
     }
   }
 

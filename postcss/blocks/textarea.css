@@ -12,3 +12,9 @@
     border-color: $color-main;
   }
 }
+
+@media (--tablet) {
+  .textarea {
+    font-size: 19px;
+  }
+}
