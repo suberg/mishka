@@ -10,12 +10,20 @@
     "gulp": "3.9.1",
     "gulp-plumber": "1.1.0",
     "gulp-postcss": "6.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-svgmin": "^1.2.3",
+    "gulp-svgstore": "^6.1.0",
     "normalize.css": "^5.0.0",
-    "precss": "1.4.0"
+    "picturefill": "^3.0.2",
+    "precss": "1.4.0",
+    "svg4everybody": "^2.1.7"
   },
   "scripts": {
     "test": "editorconfig-cli",
-    "build": "gulp style",
+    "build": "gulp build",
+    "symbols": "gulp symbols",
+    "js": "gulp js",
+    "svg": "gulp svg",
     "start": "gulp serve"
   },
   "editorconfig-cli": [
