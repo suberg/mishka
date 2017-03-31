@@ -3,11 +3,9 @@
   line-height: 18px;
 
   display: block;
+
   width: 100%;
-
-  margin-bottom: 11px;
-
-  cursor: pointer;
+  margin-bottom: 13px;
   @mixin title;
 }
 
@@ -16,8 +14,14 @@
   border-color: $color-main;
 }
 
-.radio:active .radio__text::before {
+.radio:active .radio__text::before,
+.radio__choose:disabled + .radio__text::before {
   border-color: $light-gray;
+}
+
+.radio__choose:disabled + .radio__text {
+  cursor: not-allowed;
+  color: $light-gray;
 }
 
 .radio__choose {
@@ -27,13 +31,15 @@
 .radio__text {
   display: flex;
 
+  cursor: pointer;
+
   align-items: baseline;
   &::before {
     box-sizing: border-box;
     width: 39px;
     height: 39px;
-    padding: 10px;
     margin-right: 23px;
+    padding: 10px;
 
     content: '\00A0';
 
@@ -53,7 +59,8 @@
 @media (--tablet) {
   .radio {
     font-size: 19px;
-    margin-bottom: 23px;
+
+    margin-bottom: $input-margin;
   }
 
   .radio__text {
@@ -61,7 +68,7 @@
       width: 52px;
       height: 52px;
       margin-right: 28px;
-      padding: 13px;
+      padding: 14px;
     }
   }
 }

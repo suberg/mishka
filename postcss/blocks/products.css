@@ -16,5 +16,6 @@
 @media (--desktop) {
   .products {
     margin: 105px auto 26px;
+    justify-content: flex-start;
   }
 }

@@ -4,11 +4,11 @@
 @import 'mixins.css';
 
 @import 'global/fonts.css';
-@import 'global/container.css';
-@import 'global/title.css';
-@import 'global/button.css';
-@import 'global/caption.css';
 
+@import 'blocks/title.css';
+@import 'blocks/caption.css';
+@import 'blocks/container.css';
+@import 'blocks/button.css';
 @import 'blocks/page-body.css';
 @import 'blocks/page-header.css';
 @import 'blocks/mishka.css';

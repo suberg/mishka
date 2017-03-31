@@ -12,6 +12,10 @@ $tiffany: #56c3b2;
 @custom-media --desktop (min-width: 1150px);
 @custom-media --retina (min-resolution: 144dpi), (min-resolution: 1.5dppx);
 
+$fieldset-padding-top: 50px;
+$input-margin: 24px;
+$fieldset-padding-bottom: calc($fieldset-padding-top - $input-margin);
+
 $container-padding-mobile: 9.375%;
 $container-padding-tablet: 6.5%;
 $column-width-tablet: 25%;

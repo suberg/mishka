@@ -1,5 +1,9 @@
 .popular-product {
-  margin: 27px auto 48px;
+  position: relative;
+
+  margin: 27px auto 20px;
+  padding-bottom: 42px;
+  @mixin bg-zigzag;
 }
 
 .popular-product__header {
@@ -11,11 +15,12 @@
   font-size: 17px;
   font-weight: bold;
   line-height: 20px;
-  flex-shrink: 0;
 
   text-transform: uppercase;
 
   color: $color-main;
+
+  flex-shrink: 0;
 }
 
 .popular-product__desc {
@@ -45,7 +50,7 @@
   font-size: 15px;
   line-height: 20px;
 
-  padding: 9px 29px 10px 0;
+  padding: 9px 22px 10px 0;
   @mixin text;
 }
 
@@ -71,7 +76,8 @@
 
 @media (--tablet) {
   .popular-product {
-    margin: 44px auto 82px;
+    margin: 44px auto 50px;
+    padding-bottom: 68px;
   }
 
   .popular-product__header {
@@ -126,7 +132,8 @@
 
 @media (--desktop) {
   .popular-product {
-    margin: 123px auto 112px;
+    margin: 123px auto 60px;
+    padding-bottom: 97px;
   }
 
   .popular-product__header {
@@ -141,7 +148,8 @@
 
   .popular-product__label {
     width: $column-width-dekstop;
-    padding: 0 30px;
+    padding-left: 15px;
+    padding-right: 27px;
   }
 
   .popular-product__table {
