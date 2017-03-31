@@ -3,8 +3,8 @@
   line-height: 20px;
 
   box-sizing: border-box;
-  margin: 16px 0;
-  padding: 52px 10px 0 0;
+  margin: 14px 0;
+  padding: 55px 10px 0 0;
 
   background-repeat: no-repeat;
   @mixin title;
@@ -41,7 +41,7 @@
 
     width: 50%;
     margin: 30px 0;
-    padding-right: 40px;
+    padding: 52px 40px 0 0;
     &.feature--ecological {
       order: 1;
     }

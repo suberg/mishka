@@ -31,7 +31,7 @@
 }
 
 .page-header__logo {
-  padding: 20px 0;
+  margin: 20px 0;
   &:hover,
   &:focus {
     opacity: 0.6;
@@ -86,28 +86,43 @@
   font-size: 17px;
   line-height: 24px;
 
+  display: flex;
+
   border-bottom: 1px solid $color-border;
   background-color: #ffffff;
-  background-repeat: no-repeat;
-  background-position: 31px;
-  &.page-header__item--search {
-    background-image: url('../img/icon-search.svg');
-  }
+  &.page-header__item--search,
   &.page-header__item--basket {
-    background-image: url('../img/icon-cart.svg');
+    position: relative;
+    &:hover .page-header__icon {
+      fill: $color-main;
+    }
+    &:active .page-header__icon {
+      opacity: 0.3;
+    }
   }
   &.page-header__item--additional {
     display: none;
   }
 }
 
-.page-header__link {
-  display: block;
+.page-header__icon {
+  position: absolute;
+  top: 30px;
+  left: 31px;
 
+  fill: $light-gray;
+}
+
+.page-header__link {
   padding: 25px 25px 29px 75px;
 
   cursor: pointer;
   text-decoration: none;
+
+  background-repeat: no-repeat;
+  background-position: 31px;
+
+  flex-grow: 1;
   @mixin title;
   &:hover,
   &:focus {
@@ -132,6 +147,7 @@
 
     min-height: 87px;
 
+    justify-content: space-between;
     flex-wrap: wrap;
     align-items: flex-start;
   }
@@ -162,6 +178,15 @@
     flex-wrap: wrap;
   }
 
+  .page-header__logo {
+    margin: 22px 0 15px;
+  }
+
+  .page-header__logo-icon {
+    width: 113px;
+    height: 46px;
+  }
+
   .page-header__item {
     border: none;
     background-color: transparent;
@@ -182,7 +207,15 @@
   }
 
   .page-header__link {
-    padding: 32px 0 31px 84px;
+    padding: 32px 0 31px 83px;
+  }
+
+  .page-header__icon {
+    position: absolute;
+    top: 35px;
+    left: 32px;
+
+    fill: $light-gray;
   }
 
   .page-header__button {
@@ -190,6 +223,8 @@
   }
 
   .page-header__text {
+    z-index: 1;
+
     display: block;
 
     margin: -25px 0 0 auto;
@@ -210,6 +245,15 @@
     &:first-of-type .page-header__list {
       width: 383px;
     }
+  }
+
+  .page-header__logo {
+    margin: 9px 37px 0 0;
+  }
+
+  .page-header__logo-icon {
+    width: 149px;
+    height: 72px;
   }
 
   .page-header__item {

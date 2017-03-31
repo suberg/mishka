@@ -15,11 +15,36 @@
   }
 }
 
+.social__image {
+  fill: #231f20;
+  &.social__image--instagram {
+    width: 22px;
+    height: 21px;
+  }
+  &.social__image--facebook {
+    width: 15px;
+    height: 29px;
+  }
+  &.social__image--twitter {
+    width: 24px;
+    height: 20px;
+  }
+  &:hover,
+  &:focus {
+    fill: $color-hover;
+  }
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 @media (--tablet) {
   .social {
+    margin-top: 7px;
     padding: 0;
-    flex-grow: 1;
 
     border-bottom: none;
+
+    flex-grow: 1;
   }
 }
