@@ -7,5 +7,7 @@
 *.sublime*
 css/*.css
 node_modules/
+js/vendor/
 build/
+img/symbols.svg
 Thumbs.db

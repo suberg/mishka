@@ -95,13 +95,6 @@
   background-color: #ffffff;
 }
 
-@media (min-width: 710px) {
-  .product {
-    width: 260px;
-  }
-
-}
-
 @media (--tablet) {
   .product {
     flex-direction: row;
