@@ -1,8 +1,13 @@
 .map {
   margin: 0 $mobile-no-container 40px;
 
-  background: url('../img/map-mobile@1x.jpg') no-repeat;
+  background-image: url('../img/map-mobile@1x.jpg');
+  background-repeat: no-repeat;
   background-position: center;
+  @media (--retina) {
+    background-image: url('../img/map-mobile@2x.jpg');
+    background-size: contain;
+  }
 }
 
 .map__item {
@@ -15,6 +20,11 @@
 @media (--tablet) {
   .map {
     margin: 0 -7.47% 55px;
+
+    background-image: url('../img/map-tablet@1x.jpg');
+    @media (--retina) {
+      background-image: url('../img/map-tablet@2x.jpg');
+    }
   }
 }
 
@@ -27,5 +37,10 @@
     width: 525px;
     height: 457px;
     margin: 0;
+
+    background-image: url('../img/map-desktop@1x.jpg');
+    @media (--retina) {
+      background-image: url('../img/map-desktop@2x.jpg');
+    }
   }
 }

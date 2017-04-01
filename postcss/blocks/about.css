@@ -1,26 +1,30 @@
+.about {
+  margin: 29px auto 18px;
+}
+
 .about__wrapper {
   display: flex;
   flex-direction: column;
-
-  margin: 20px auto 15px;
 }
 
 .about__title {
   width: 100%;
-  margin-bottom: 16px;
+  margin: 0 0 18px;
 }
 
 @media (--tablet) {
+  .about {
+    margin: 50px auto 53px;
+  }
+
   .about__wrapper {
     flex-direction: row;
-
-    margin: 60px auto 53px;
 
     flex-wrap: wrap;
   }
 
   .about__title {
-    margin-bottom: 19px;
+    margin-bottom: 20px;
   }
 }
 
@@ -28,5 +32,8 @@
   .about__wrapper {
     margin: 60px auto;
     padding-left: $column-width-dekstop;
+  }
+  .about__title {
+    margin-bottom: 18px;
   }
 }

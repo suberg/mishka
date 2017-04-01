@@ -10,7 +10,15 @@
 
     <header class="page-header  container">
       <a class="page-header__logo" href="index.html">
-        <img src="img/logo-mobile.svg" alt="Mishka logo" width="86" height="35">
+        <picture>
+          <source
+            media="(min-width: 1150px)"
+            srcset="img/logo-desktop.svg">
+          <source
+            media="(min-width: 768px)"
+            srcset="img/logo-tablet.svg">
+          <img class="page-header__logo-icon" src="img/logo-mobile.svg" width="86" height="35" alt="Mishka logo">
+        </picture>
       </a>
       <nav class="page-header__menu  page-header__menu--nojs">
         <ul class="page-header__list">
@@ -31,9 +39,15 @@
       <nav class="page-header__menu  page-header__menu--nojs">
         <ul class="page-header__list">
           <li class="page-header__item page-header__item--search">
+            <svg class="page-header__icon" width="18" height="19">
+              <use xlink:href="build/img/symbols.svg#icon-search"></use>
+            </svg>
             <a class="page-header__link" href="#">Поиск по сайту</a>
           </li>
           <li class="page-header__item page-header__item--basket">
+            <svg class="page-header__icon" width="21" height="18">
+              <use xlink:href="build/img/symbols.svg#icon-cart"></use>
+            </svg>
             <a class="page-header__link" href="#">Корзина: пока пуста</a>
           </li>
         </ul>
@@ -54,7 +68,20 @@
 
         <article class="product">
           <a href="#" class="product__link">
-            <img class="product__image" src="img/photo-1-mobile@1x.jpg" alt="Зайчик-попрыгайчик" width="260" height="195">
+            <picture>
+              <source
+                media="(min-width: 1150px)"
+                srcset="img/photo-1-desktop@2x.jpg 2x,
+                        img/photo-1-desktop@1x.jpg 1x">
+              <source
+                media="(min-width: 768px)"
+                srcset="img/photo-1-tablet@2x.jpg 2x,
+                        img/photo-1-tablet@1x.jpg 1x">
+              <img class="product__image"
+                src="img/photo-1-mobile@1x.jpg"
+                srcset="img/photo-1-mobile@2x.jpg 2x,
+                        img/photo-1-mobile@1x.jpg 1x" alt="Зайчик-попрыгайчик">
+            </picture>
           </a>
           <div class="product__desc">
             <h3 class="product__caption">
@@ -64,7 +91,9 @@
             <div class="product__buy">
               <span class="product__price">1 200 руб.</span>
               <a class="product__add" href="#">
-                <img class="product__cart" src="img/icon-cart.svg" alt="Добавить в корзину" width="21" height="19">
+                <svg class="product__cart" width="21" height="18">
+                  <use xlink:href="build/img/symbols.svg#icon-cart"></use>
+                </svg>
               </a>
             </div>
           </div>
@@ -72,7 +101,20 @@
 
         <article class="product">
           <a href="#" class="product__link">
-            <img class="product__image" src="img/photo-2-mobile@1x.jpg" alt="Корзинка для белья" width="260" height="195">
+            <picture>
+              <source
+                media="(min-width: 1150px)"
+                srcset="img/photo-2-desktop@2x.jpg 2x,
+                        img/photo-2-desktop@1x.jpg 1x">
+              <source
+                media="(min-width: 768px)"
+                srcset="img/photo-2-tablet@2x.jpg 2x,
+                        img/photo-2-tablet@1x.jpg 1x">
+              <img class="product__image"
+                src="img/photo-2-mobile@1x.jpg"
+                srcset="img/photo-2-mobile@2x.jpg 2x,
+                        img/photo-2-mobile@1x.jpg 1x" alt="Корзинка для белья">
+            </picture>
           </a>
           <div class="product__desc">
             <h3 class="product__caption">
@@ -82,7 +124,9 @@
             <div class="product__buy">
               <span class="product__price">690 руб.</span>
               <a class="product__add" href="#">
-                <img class="product__cart" src="img/icon-cart.svg" alt="Добавить в корзину" width="21" height="19">
+                <svg class="product__cart" width="21" height="18">
+                  <use xlink:href="build/img/symbols.svg#icon-cart"></use>
+                </svg>
               </a>
             </div>
           </div>
@@ -90,7 +134,20 @@
 
         <article class="product">
           <a href="#" class="product__link">
-            <img class="product__image" src="img/photo-3-mobile@1x.jpg" alt="Большая корзинка для игрушек" width="260" height="195">
+            <picture>
+              <source
+                media="(min-width: 1150px)"
+                srcset="img/photo-3-desktop@2x.jpg 2x,
+                        img/photo-3-desktop@1x.jpg 1x">
+              <source
+                media="(min-width: 768px)"
+                srcset="img/photo-3-tablet@2x.jpg 2x,
+                        img/photo-3-tablet@1x.jpg 1x">
+              <img class="product__image"
+                src="img/photo-3-mobile@1x.jpg"
+                srcset="img/photo-3-mobile@2x.jpg 2x,
+                        img/photo-3-mobile@1x.jpg 1x" alt="Большая корзинка для игрушек">
+            </picture>
           </a>
           <div class="product__desc">
             <h3 class="product__caption">
@@ -100,7 +157,9 @@
             <div class="product__buy">
               <span class="product__price">1 500 руб.</span>
               <a class="product__add" href="#">
-                <img class="product__cart" src="img/icon-cart.svg" alt="Добавить в корзину" width="21" height="19">
+                <svg class="product__cart" width="21" height="18">
+                  <use xlink:href="build/img/symbols.svg#icon-cart"></use>
+                </svg>
               </a>
             </div>
           </div>
@@ -114,7 +173,20 @@
             <h3 class="caption process__title">Процесс производства</h3>
           </header>
           <div class="process__video">
-            <img class="process__item" src="img/video-mobile@1x.jpg" alt="Процесс производства" width="260" height="150">
+            <picture>
+              <source
+                media="(min-width: 1150px)"
+                srcset="img/video-desktop@2x.jpg 2x,
+                        img/video-desktop@1x.jpg 1x">
+              <source
+                media="(min-width: 768px)"
+                srcset="img/video-tablet@2x.jpg 2x,
+                        img/video-tablet@1x.jpg 1x">
+              <img class="process__item"
+                src="img/video-mobile@1x.jpg"
+                srcset="img/video-mobile@2x.jpg 2x,
+                        img/video-mobile@1x.jpg 1x" alt="Процесс производства">
+            </picture>
           </div>
           <div class="process__desc">
             <p class="process__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
@@ -128,22 +200,32 @@
     <footer class="page-footer">
       <div class="container  page-footer__wrapper">
         <a class="page-footer__logo" href="index.html">
-          <img src="img/logo-mobile.svg" alt="Mishka logo" width="102" height="34">
+          <svg class="page-footer__image" width="102" height="34">
+            <use xlink:href="build/img/symbols.svg#logo-footer"></use>
+          </svg>
         </a>
         <section class="social">
           <a class="social__link" href="#">
-            <img src="img/icon-insta.svg" alt="instagram" class="social__image" width="22" height="21">
+            <svg class="social__image  social__image--instagram" width="22" height="21">
+              <use xlink:href="build/img/symbols.svg#icon-insta"></use>
+            </svg>
           </a>
           <a class="social__link" href="#">
-            <img src="img/icon-fb.svg" alt="facebook" class="social__image" width="15" height="29">
+            <svg class="social__image  social__image--facebook" width="15" height="29">
+              <use xlink:href="build/img/symbols.svg#icon-fb"></use>
+            </svg>
           </a>
           <a class="social__link" href="#">
-            <img src="img/icon-twitter.svg" alt="twitter" class="social__image" width="24" height="20">
+            <svg class="social__image  social__image--twitter" width="24" height="20">
+              <use xlink:href="build/img/symbols.svg#icon-twitter"></use>
+            </svg>
           </a>
         </section>
         <a class="developer">
           <span class="developer__title">Разработано</span>
-          <img class="developer__logo" src="img/logo-htmlacademy.svg" alt="HTML Academy" width="27" height="34">
+          <svg class="developer__logo" width="27" height="34">
+            <use xlink:href="build/img/symbols.svg#logo-htmlacademy"></use>
+          </svg>
         </a>
       </div>
     </footer>
@@ -172,6 +254,9 @@
       </div>
     </div>
 
+  <script src="build/js/picturefill.min.js"></script>
+  <script src="build/js/svg4everybody.min.js"></script>
+  <script>svg4everybody();</script>
   <script src="js/script.js"></script>
   </body>
 </html>

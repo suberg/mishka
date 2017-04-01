@@ -1,8 +1,14 @@
 .feedback {
+  position: relative;
+
+  margin: 10px 0 35px;
+  padding-bottom: 52px;
+  @mixin bg-zigzag;
+}
+
+.feedback__wrapper {
   display: flex;
   flex-direction: column;
-
-  margin: 10px 0 69px;
 }
 
 .feedback__title {
@@ -17,6 +23,7 @@
 
 .feedback__arrow {
   display: inline-block;
+  cursor: pointer;
 
   width: 50%;
   padding: 12px;
@@ -25,24 +32,38 @@
 
   border: 1px solid $color-border;
   background-color: #ffffff;
-  &:hover,
-  &:focus {
+  &:hover .feedback__icon,
+  &:focus .feedback__icon {
     opacity: 0.6;
   }
-  &:active {
+  &:active .feedback__icon {
     opacity: 0.3;
   }
+}
+
+.feedback__icon {
+  width: 51px;
+  height: 26px;
 }
 
 @media (--tablet) {
   .feedback {
     flex-direction: row;
 
-    margin: 10px auto 85px;
-    padding-top: 78px;
-    padding-bottom: 48px;
+    margin: 10px auto 47px;
+    padding: 78px 0 130px;
 
-    background: #ffffff url('../img/review@1x.jpg') no-repeat;
+    background-color: #ffffff;
+    background-image: url('../img/review@1x.jpg');
+    background-repeat: no-repeat;
+    @media (--retina) {
+      background-image: url('../img/review@2x.jpg');
+      background-size: 351px auto;
+    }
+  }
+
+  .feedback__wrapper {
+    flex-direction: row;
 
     flex-wrap: wrap;
     justify-content: space-between;
@@ -72,10 +93,9 @@
 
 @media (--desktop) {
   .feedback {
-    padding-top: 71px;
-    padding-bottom: 95px;
+    padding: 70px 0 183px;
 
-    background-position-x: 6.3%;
+    background-position-x: calc(50% - 350px);
   }
 
   .feedback__title,

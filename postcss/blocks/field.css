@@ -3,7 +3,7 @@
 
   box-sizing: border-box;
   width: 100%;
-  padding: 15px 0;
+  padding: 15px 0 14px;
 
   border: none;
   border-bottom: 2px solid #000000;
@@ -18,11 +18,19 @@
     margin-bottom: 30px;
 
     background-image: url('../img/icon-phone.svg');
+    &:hover,
+    &:focus {
+      background-image: url('../img/icon-phone-hover.svg');
+    }
   }
   &.field--email {
-    margin-bottom: 11px;
+    margin-bottom: 16px;
 
     background-image: url('../img/icon-mail.svg');
+    &:hover,
+    &:focus {
+      background-image: url('../img/icon-mail-hover.svg');
+    }
   }
   &.field--email,
   &.field--tel {
@@ -37,11 +45,9 @@
     padding-left: 17px;
 
     background-position: top 11px right 23px;
-    &.field--tel {
-      margin-bottom: 24px;
-    }
+    &.field--tel,
     &.field--email {
-      margin-bottom: 23px;
+      margin-bottom: $input-margin;
     }
   }
 }

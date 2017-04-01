@@ -29,6 +29,9 @@
 
   border: 2px solid $color-border;
   @mixin button;
+  &:hover {
+    border-color: $light-gray;
+  }
 }
 
 .pick__radio {

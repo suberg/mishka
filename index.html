@@ -10,7 +10,15 @@
 
     <header class="page-header  container">
       <a class="page-header__logo">
-        <img src="img/logo-mobile.svg" alt="Mishka logo" width="86" height="35">
+        <picture>
+          <source
+            media="(min-width: 1150px)"
+            srcset="img/logo-desktop.svg">
+          <source
+            media="(min-width: 768px)"
+            srcset="img/logo-tablet.svg">
+          <img class="page-header__logo-icon" src="img/logo-mobile.svg" width="86" height="35" alt="Mishka logo">
+        </picture>
       </a>
       <nav class="page-header__menu  page-header__menu--nojs">
         <ul class="page-header__list">
@@ -31,9 +39,15 @@
       <nav class="page-header__menu  page-header__menu--nojs">
         <ul class="page-header__list">
           <li class="page-header__item page-header__item--search">
+            <svg class="page-header__icon" width="18" height="19">
+              <use xlink:href="build/img/symbols.svg#icon-search"></use>
+            </svg>
             <a class="page-header__link" href="#">Поиск по сайту</a>
           </li>
           <li class="page-header__item page-header__item--basket">
+            <svg class="page-header__icon" width="21" height="18">
+              <use xlink:href="build/img/symbols.svg#icon-cart"></use>
+            </svg>
             <a class="page-header__link" href="#">Корзина: пока пуста</a>
           </li>
         </ul>
@@ -54,30 +68,45 @@
         </div>
       </section>
 
-      <section class="popular-product  container">
-        <div class="popular-product__header">
-          <h2 class="title  popular-product__title">Вязаные корзинки</h2>
-          <span class="popular-product__label">Товар недели</span>
-        </div>
-        <div class="popular-product__item">
-          <p class="popular-product__desc">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-          <table class="popular-product__table">
-            <tr class="popular-product__row">
-              <td class="popular-product__parameter">Цвет:</td>
-              <td class="popular-product__value">«Тиффани»/серый</td>
-            </tr>
-            <tr class="popular-product__row">
-              <td class="popular-product__parameter">Диаметр:</td>
-              <td class="popular-product__value">25 см</td>
-            </tr>
-            <tr class="popular-product__row">
-              <td class="popular-product__parameter">Высота:</td>
-              <td class="popular-product__value">15 см</td>
-            </tr>
-          </table>
-          <img class="popular-product__pic" src="img/triple-set-mobile@1x.jpg" alt="Товар недели" width="260" height="315">
-          <span class="popular-product__price">Цена: 990 руб.</span>
-          <a class="btn  btn--order" href="#">Заказать</a>
+      <section class="popular-product">
+        <div class="container">
+          <div class="popular-product__header">
+            <h2 class="title  popular-product__title">Вязаные корзинки</h2>
+            <span class="popular-product__label">Товар недели</span>
+          </div>
+          <div class="popular-product__item">
+            <p class="popular-product__desc">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+            <table class="popular-product__table">
+              <tr class="popular-product__row">
+                <td class="popular-product__parameter">Цвет:</td>
+                <td class="popular-product__value">«Тиффани»/серый</td>
+              </tr>
+              <tr class="popular-product__row">
+                <td class="popular-product__parameter">Диаметр:</td>
+                <td class="popular-product__value">25 см</td>
+              </tr>
+              <tr class="popular-product__row">
+                <td class="popular-product__parameter">Высота:</td>
+                <td class="popular-product__value">15 см</td>
+              </tr>
+            </table>
+            <picture>
+              <source
+                media="(min-width: 1150px)"
+                srcset="img/triple-set-desktop@2x.jpg 2x,
+                        img/triple-set-desktop@1x.jpg 1x">
+              <source
+                media="(min-width: 768px)"
+                srcset="img/triple-set-tablet@2x.jpg 2x,
+                        img/triple-set-tablet@1x.jpg 1x">
+              <img class="popular-product__pic"
+                src="img/triple-set-mobile@1x.jpg"
+                srcset="img/triple-set-mobile@2x.jpg 2x,
+                        img/triple-set-mobile@1x.jpg 1x" alt="Товар недели">
+            </picture>
+            <span class="popular-product__price">Цена: 990 руб.</span>
+            <a class="btn  btn--order" href="#">Заказать</a>
+          </div>
         </div>
       </section>
 
@@ -93,23 +122,33 @@
         </div>
       </section>
 
-      <section class="feedback  container">
-        <h2 class="title  feedback__title">Отзывы</h2>
-        <div class="feedback__list">
-          <blockquote class="review">
-            <p class="review__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-            <span class="review__author">Анастасия Красильникова</span>
-            <cite class="review__contact">@misssssiskras</cite>
-          </blockquote>
+      <section class="feedback">
+        <div class="container  feedback__wrapper">
+          <h2 class="title  feedback__title">Отзывы</h2>
+          <div class="feedback__list">
+            <blockquote class="review">
+              <p class="review__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+              <span class="review__author">Анастасия Красильникова</span>
+              <cite class="review__contact">@misssssiskras</cite>
+            </blockquote>
+          </div>
+          <div class="feedback__arrows">
+            <button class="feedback__arrow feedback__arrow--left" type="button">
+              <svg class="feedback__icon" width="50" height="26">
+                <use xlink:href="build/img/symbols.svg#icon-left-arrow"></use>
+              </svg>
+            </button>
+            <button class="feedback__arrow feedback__arrow--right" type="button">
+              <svg class="feedback__icon" width="50" height="26">
+                <use xlink:href="build/img/symbols.svg#icon-right-arrow"></use>
+              </svg>
+            </button>
+          </div>
+          <a class="btn  feedback__button" href="#">Написать</a>
         </div>
-        <div class="feedback__arrows">
-          <button class="feedback__arrow feedback__arrow--left" type="button"><img src="img/icon-left-arrow.svg" alt="Left"></button>
-          <button class="feedback__arrow feedback__arrow--right" type="button"><img src="img/icon-right-arrow.svg" alt="Right"></button>
-        </div>
-        <a class="btn  feedback__button" href="#">Написать</a>
       </section>
 
-      <section class="contacts container">
+      <section class="contacts  container">
         <div class="contacts__wrapper">
           <h2 class="title  contacts__title">Контакты</h2>
           <table class="contacts__table">
@@ -133,23 +172,33 @@
 
     <footer class="page-footer">
       <div class="container  page-footer__wrapper">
-        <a class="page-footer__logo" href="index.html">
-          <img src="img/logo-mobile.svg" alt="Mishka logo" width="102" height="34">
+        <a class="page-footer__logo">
+          <svg class="page-footer__image" width="102" height="34">
+            <use xlink:href="build/img/symbols.svg#logo-footer"></use>
+          </svg>
         </a>
         <section class="social">
           <a class="social__link" href="#">
-            <img src="img/icon-insta.svg" alt="instagram" class="social__image" width="22" height="21">
+            <svg class="social__image  social__image--instagram" width="22" height="21">
+              <use xlink:href="build/img/symbols.svg#icon-insta"></use>
+            </svg>
           </a>
           <a class="social__link" href="#">
-            <img src="img/icon-fb.svg" alt="facebook" class="social__image" width="15" height="29">
+            <svg class="social__image  social__image--facebook" width="15" height="29">
+              <use xlink:href="build/img/symbols.svg#icon-fb"></use>
+            </svg>
           </a>
           <a class="social__link" href="#">
-            <img src="img/icon-twitter.svg" alt="twitter" class="social__image" width="24" height="20">
+            <svg class="social__image  social__image--twitter" width="24" height="20">
+              <use xlink:href="build/img/symbols.svg#icon-twitter"></use>
+            </svg>
           </a>
         </section>
         <a class="developer">
           <span class="developer__title">Разработано</span>
-          <img class="developer__logo" src="img/logo-htmlacademy.svg" alt="HTML Academy" width="27" height="34">
+          <svg class="developer__logo" width="27" height="34">
+            <use xlink:href="build/img/symbols.svg#logo-htmlacademy"></use>
+          </svg>
         </a>
       </div>
     </footer>
@@ -178,6 +227,9 @@
       </div>
     </div>
 
+    <script src="build/js/picturefill.min.js"></script>
+    <script src="build/js/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script>
     <script src="js/script.js"></script>
   </body>
 </html>

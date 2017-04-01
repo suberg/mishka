@@ -8,11 +8,8 @@
   display: block;
   overflow: hidden;
 
-  margin-bottom: 22px;
+  margin: 2px 0 20px;
   @mixin title;
-  &:last-child {
-    margin-bottom: 11px;
-  }
 }
 
 .checkbox:focus .checkbox__text::before,
@@ -20,8 +17,14 @@
   border-color: $color-main;
 }
 
-.checkbox:active .checkbox__text::before {
+.checkbox:active .checkbox__text::before,
+.checkbox__input:disabled + .checkbox__text::before {
   border-color: $light-gray;
+}
+
+.checkbox__input:disabled + .checkbox__text {
+  cursor: not-allowed;
+  color: $light-gray;
 }
 
 .checkbox__input {
@@ -57,8 +60,7 @@
     font-size: 19px;
 
     width: 48%;
-    margin-right: 4%;
-    margin-bottom: 23px;
+    margin: 0 4% $input-margin 0;
     &:nth-child(2n) {
       margin-right: 0;
     }
@@ -66,8 +68,8 @@
 
   .checkbox__text {
     &::before {
-      width: 53px;
-      height: 53px;
+      width: 54px;
+      height: 52px;
       margin-right: 27px;
     }
   }

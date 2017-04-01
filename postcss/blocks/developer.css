@@ -6,6 +6,10 @@
   cursor: pointer;
 
   justify-content: center;
+  &:hover .developer__logo,
+  &:focus .developer__logo {
+    fill: $color-hover;
+  }
   &:active {
     opacity: 0.3;
   }
@@ -21,12 +25,14 @@
 
 .developer__logo {
   fill: $color-main;
+  width: 27px;
+  height: 34px;
 }
 
 @media (--tablet) {
   .developer {
     min-width: 200px;
-    margin: 0;
+    margin: 8px 0 0;
 
     justify-content: flex-end;
   }

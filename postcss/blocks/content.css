@@ -1,12 +1,10 @@
 .content {
-  margin: 20px 0 55px;
+  margin: 22px 0 55px;
 }
 
 .content__desc {
   font-size: 13px;
   line-height: 24px;
-
-  margin-bottom: 12px;
   @mixin text;
 }
 
@@ -19,17 +17,18 @@
     font-size: 17px;
     line-height: 30px;
 
-    margin-bottom: 10px;
+    margin-bottom: 7px;
   }
 }
 
 @media (--desktop) {
   .content {
-    margin: 125px 0 52px;
+    margin: 125px 0 50px;
   }
   .content__desc {
     font-size: 17px;
     line-height: 30px;
+    margin-bottom: 5px;
 
     width: calc($column-width-dekstop*4);
     margin-left: $column-width-dekstop;

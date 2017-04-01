@@ -1,5 +1,5 @@
 .contacts {
-  margin: 86px 0 37px;
+  margin: 35px 0 37px;
 }
 
 .contacts__wrapper {
@@ -57,7 +57,7 @@
 
 @media (--tablet) {
   .contacts {
-    margin: 130px 0 57px;
+    margin: 47px 0 57px;
   }
 
   .contacts__wrapper {
@@ -94,14 +94,14 @@
 
 @media (--desktop) {
   .contacts {
-    margin: 162px auto 103px;
+    margin: 71px auto 103px;
   }
 
   .contacts__wrapper {
     min-height: 432px;
-    padding: 25px 50% 0 $column-width-dekstop;
+    padding: 27px 50% 0 $column-width-dekstop;
 
-    background-position: top 60px left 63px;
+    background-position: top 64px left 63px;
     background-origin: border-box;
   }
 

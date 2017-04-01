@@ -14,12 +14,25 @@
   display: none;
 }
 
+.page-footer__image {
+  width: 102px;
+  height: 34px;
+  fill: #231f20;
+  &:hover,
+  &:focus {
+    fill: $color-hover;
+  }
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 @media (--tablet) {
   .page-footer__wrapper {
     flex-direction: row;
 
-    padding-top: 60px;
-    padding-bottom: 45px;
+    padding-top: 51px;
+    padding-bottom: 50px;
   }
 
   .page-footer__logo {
