@@ -65,3 +65,10 @@
     margin-top: 15px;
   }
 }
+
+@media (--desktop) {
+  .modal__title {
+    font-size: 30px;
+    line-height: 57px;
+  }
+}
